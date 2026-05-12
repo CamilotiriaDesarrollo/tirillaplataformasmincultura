@@ -1,8 +1,11 @@
 import HeaderMincultura from '@/components/headerMincultura'
-import TirillaF from '@/components/tirillaF'
 import FooterMincultura from '@/components/footerMincultura'
 import AccesibilidadBar from '@/components/accesibilidadBar'
-import { sistemasDemo } from '@/data/sistemasDemo'
+import PortalSection from '@/components/portalSection'
+import PortalSectionV1 from '@/components/portalSectionV1'
+import PortalSectionV2 from '@/components/portalSectionV2'
+import PortalSectionV3 from '@/components/portalSectionV3'
+import EjesSection from '@/components/ejesSection'
 
 function Home() {
   return (
@@ -10,44 +13,23 @@ function Home() {
       <AccesibilidadBar />
       <HeaderMincultura />
 
-      {/* ── Contenido de la página (placeholder) ─────────── */}
-      <section className="page-placeholder">
-        <p className="page-placeholder__text">(Contenido de la página)</p>
-      </section>
+      {/* ── Espacio en blanco scrolleable ─────────────────── */}
+      <section className="home-hero" />
 
-      {/* ── Tirillas animadas ─────────────────────────────── */}
-      <TirillaF
-        sistemas={sistemasDemo}
-        labelFixed="Explora la cultura"
-        labelCarousel="Aliados — Otras plataformas"
-      />
-      <TirillaF
-        dark
-        sistemas={sistemasDemo}
-        labelFixed="Explora la cultura"
-        labelCarousel="Aliados — Otras plataformas"
-      />
+      {/* ── Portal misional (cards + banda institucional) ── */}
+      <PortalSection />
 
-      {/* ── Separador versión estática ────────────────────── */}
-      <section className="page-version-sep">
-        <p className="page-version-sep__text">(Contenido de la página)</p>
-        <span className="page-version-sep__label">Versión estática</span>
-      </section>
+      {/* ── Versión 1 — tarjetas con flip ───────────────── */}
+      <PortalSectionV1 />
 
-      {/* ── Tirillas estáticas ────────────────────────────── */}
-      <TirillaF
-        staticMode
-        sistemas={sistemasDemo}
-        labelFixed="Explora la cultura"
-        labelCarousel="Aliados — Otras plataformas"
-      />
-      <TirillaF
-        staticMode
-        dark
-        sistemas={sistemasDemo}
-        labelFixed="Explora la cultura"
-        labelCarousel="Aliados — Otras plataformas"
-      />
+      {/* ── Versión 2 — positivo / negativo ─────────────── */}
+      <PortalSectionV2 />
+
+      {/* ── Versión 3 — acordeón horizontal ─────────────── */}
+      <PortalSectionV3 />
+
+      {/* ── Ejes estratégicos ────────────────────────────── */}
+      <EjesSection />
 
       <FooterMincultura />
     </div>
